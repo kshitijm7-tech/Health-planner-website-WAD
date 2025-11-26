@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPlanner - Your Wellness Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">💚 HealthPlanner</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#diets">Diets</a></li>
+                <li><a href="#exercises">Exercises</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Journey to Better Health Starts Here</h1>
+            <p>Explore balanced diets, effective exercises, and wellness tips</p>
+            <button class="cta-btn" onclick="document.getElementById('diets').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Diets Section -->
+    <section id="diets" class="section">
+        <div class="container">
+            <h2>Balanced Diets</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterDiets('all')">All</button>
+                <button class="filter-btn" onclick="filterDiets('vegan')">Vegan</button>
+                <button class="filter-btn" onclick="filterDiets('keto')">Keto</button>
+                <button class="filter-btn" onclick="filterDiets('balanced')">Balanced</button>
+            </div>
+            <div class="cards-grid" id="diets-grid">
+                <!-- Cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercises Section -->
+    <section id="exercises" class="section alternate">
+        <div class="container">
+            <h2>Exercise Routines</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterExercises('all')">All</button>
+                <button class="filter-btn" onclick="filterExercises('cardio')">Cardio</button>
+                <button class="filter-btn" onclick="filterExercises('strength')">Strength</button>
+                <button class="filter-btn" onclick="filterExercises('flexibility')">Flexibility</button>
+            </div>
+            <div class="cards-grid" id="exercises-grid">
+                <!-- Cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="section">
+        <div class="container">
+            <h2>Wellness Blogs</h2>
+            <div class="cards-grid" id="blogs-grid">
+                <!-- Cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 HealthPlanner. Your wellness partner. 💪</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
